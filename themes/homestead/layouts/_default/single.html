@@ -1,6 +1,20 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ partial "metadata.html" . }}
-<br><br>
-{{ .Content }}
+<div class="container">
+  <div id="home-jumbotron" class="jumbotron text-center">
+    <h1 class="display-1">{{ .Site.Title }}</h1>
+  </div>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a href="/" class="nav-link">Home</a>
+    </li>
+    <li class="nav-link active">
+      <a href="/about">About</a>
+    </li>
+  </ul>
+
+  <h4 class="text-center" style="padding-top: 2em;">{{ .Title }}</h4>
+   <div class="container text-center fs-5" style="padding-top: 1.5em;">
+       {{ .Content }}
+   </div>
+</div>
 {{ end }}
